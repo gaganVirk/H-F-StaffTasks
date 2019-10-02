@@ -2,6 +2,7 @@ package nz.co.handfchipping.Models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import nz.co.handfchipping.ViewModels.ProjectGet
 import java.util.*
 
 @Entity(tableName = "Projects")
@@ -19,5 +20,12 @@ class Project(name: String, address: String, contactNumber: String, email: Strin
 
     var synced: Boolean = false
 
+    constructor(get: ProjectGet): this(get.name, get.address, get.contactNumber, get.email, get.id)
 
+    fun update(get: ProjectGet) {
+        name = get.name
+        address = get.address
+        contactNumber = get.contactNumber
+        email = get.email
+    }
 }
