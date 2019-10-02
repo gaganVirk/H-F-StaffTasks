@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/constraintLayout">
+
+<EditText
+    android:layout_width="333dp"
+    android:layout_height="55dp"
+    android:inputType="textPersonName"
+    android:text="Name"
+    android:ems="10"
+    android:id="@+id/nameText" app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.211"/>
+<EditText
+    android:layout_width="333dp"
+    android:layout_height="55dp"
+    android:inputType="textPersonName"
+    android:text="Email"
+    android:ems="10"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.584"
+    android:id="@+id/emailText"/>
+<EditText
+    android:layout_width="333dp"
+    android:layout_height="55dp"
+    android:inputType="textPersonName"
+    android:text="PhoneNumber"
+    android:ems="10"
+    android:id="@+id/phoneNumberText" app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.452"/>
+<EditText
+    android:layout_width="333dp"
+    android:layout_height="55dp"
+    android:inputType="textPersonName"
+    android:ems="10"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.325"
+    android:id="@+id/addressText" android:text="Address"/>
+<Button
+    android:text="Submit"
+    android:layout_width="333dp"
+    android:layout_height="55dp"
+    android:id="@+id/submitButton" app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/emailText" app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.194"/>
+<TextView
+    android:text="Project Description"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/nameText" android:textSize="24sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

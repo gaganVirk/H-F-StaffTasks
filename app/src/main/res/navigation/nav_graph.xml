@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/taskFragment">
 
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="nz.co.handfchipping.Fragments.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task"/>
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="nz.co.handfchipping.TasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_addTasksFragment"
+            app:destination="@id/addTasksFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTasksFragment"
+        android:name="nz.co.handfchipping.Fragment.AddTasksFragment"
+        android:label="fragment_add_tasks"
+        tools:layout="@layout/fragment_add_tasks" />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="nz.co.handfchipping.Fragment.ProjectsFragment"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_projects" >
+        <action
+            android:id="@+id/action_projectsFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_createUpdateProjectFragment"
+            app:destination="@id/createUpdateProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createUpdateProjectFragment"
+        android:name="nz.co.handfchipping.Fragments.CreateUpdateProjectFragment"
+        android:label="fragment_create_update_project"
+        tools:layout="@layout/fragment_create_update_project" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="nz.co.handfchipping.Fragments.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_addCategoriesFragment"
+            app:destination="@id/addCategoriesFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_subcategoriesFragment"
+            app:destination="@id/subcategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoriesFragment"
+        android:name="nz.co.handfchipping.Fragements.AddCategoriesFragment"
+        android:label="fragment_add_categories"
+        tools:layout="@layout/fragment_add_categories" >
+        <action
+            android:id="@+id/action_addCategoriesFragment_to_customCategoryFragment"
+            app:destination="@id/customCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customCategoryFragment"
+        android:name="nz.co.handfchipping.Fragments.CustomCategoryFragment"
+        android:label="fragment_custom_category"
+        tools:layout="@layout/fragment_custom_category" />
+    <fragment
+        android:id="@+id/subcategoriesFragment"
+        android:name="nz.co.handfchipping.Fragments.SubcategoriesFragment"
+        android:label="fragment_subcategories"
+        tools:layout="@layout/fragment_subcategories" >
+        <action
+            android:id="@+id/action_subcategoriesFragment_to_addSubcategoriesFragment"
+            app:destination="@id/addSubcategoriesFragment" />
+        <action
+            android:id="@+id/action_subcategoriesFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSubcategoriesFragment"
+        android:name="nz.co.handfchipping.Fragments.AddSubcategoriesFragment"
+        android:label="fragment_add_subcategories"
+        tools:layout="@layout/fragment_add_subcategories" >
+        <action
+            android:id="@+id/action_addSubcategoriesFragment_to_customSubcategoryFragment"
+            app:destination="@id/customSubcategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customSubcategoryFragment"
+        android:name="nz.co.handfchipping.Fragments.CustomSubcategoryFragment"
+        android:label="fragment_custom_subcategory"
+        tools:layout="@layout/fragment_custom_subcategory" />
 </navigation>
